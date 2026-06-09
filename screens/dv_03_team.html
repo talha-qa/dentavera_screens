@@ -1,0 +1,145 @@
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Inter',sans-serif}
+.app{display:grid;grid-template-columns:220px 1fr;min-height:740px;background:#f4f6fb}
+.sb{background:#040e22;padding:0;display:flex;flex-direction:column}
+.sb-top{padding:24px 20px 20px;border-bottom:1px solid rgba(255,255,255,0.07)}
+.sb-brand{display:flex;align-items:center;gap:10px}
+.sb-box{width:28px;height:28px;background:#2563ff;border-radius:7px;display:flex;align-items:center;justify-content:center}
+.sb-box i{color:#fff;font-size:13px}
+.sb-name{font-size:14px;font-weight:600;color:#fff;letter-spacing:-0.3px}
+.sb-org{font-size:10px;color:rgba(255,255,255,0.28);margin-top:1px}
+.sb-nav{padding:14px 10px;flex:1}
+.sb-sec{font-size:9px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,0.2);padding:14px 10px 6px}
+.sb-item{display:flex;align-items:center;gap:9px;padding:8px 10px;border-radius:7px;cursor:pointer;color:rgba(255,255,255,0.42);font-size:12px;margin-bottom:1px}
+.sb-item i{font-size:15px;flex-shrink:0}
+.sb-item.on{background:rgba(37,99,255,0.16);color:#fff}
+.sb-item.on i{color:#5b8fff}
+.sb-bot{padding:14px 20px;border-top:1px solid rgba(255,255,255,0.07);display:flex;align-items:center;gap:9px}
+.sb-av{width:30px;height:30px;background:rgba(37,99,255,0.28);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:600;color:#7aaeff;flex-shrink:0}
+.sb-un{font-size:11px;font-weight:500;color:#fff}
+.sb-ur{font-size:10px;color:rgba(255,255,255,0.28)}
+.main{padding:28px 28px;overflow:auto}
+.pg-eyebrow{font-size:9px;font-weight:600;letter-spacing:2.5px;text-transform:uppercase;color:#2563ff;margin-bottom:6px}
+.pg-title{font-size:22px;font-weight:600;color:#040e22;letter-spacing:-0.5px}
+.pg-sub{font-size:12px;color:#94a3b8;margin-top:3px;margin-bottom:24px}
+.top-row{display:flex;align-items:center;justify-content:space-between;margin-bottom:20px}
+.btn-invite{background:#2563ff;color:#fff;border:none;border-radius:9px;padding:9px 16px;font-size:12px;font-weight:500;font-family:'Inter',sans-serif;cursor:pointer;display:flex;align-items:center;gap:6px}
+.btn-invite i{font-size:14px}
+.seat-bar{background:#fff;border-radius:12px;border:1px solid #eaeff8;padding:14px 18px;margin-bottom:18px;display:flex;align-items:center;justify-content:space-between}
+.seat-info{font-size:12px;font-weight:500;color:#040e22}
+.seat-sub{font-size:10px;color:#94a3b8;margin-top:2px}
+.prog-wrap{display:flex;align-items:center;gap:10px}
+.prog-bar{width:110px;height:5px;background:#eaeff8;border-radius:100px;overflow:hidden}
+.prog-fill{height:100%;background:#2563ff;border-radius:100px}
+.prog-lbl{font-size:10px;color:#94a3b8}
+.table-card{background:#fff;border-radius:12px;border:1px solid #eaeff8;overflow:hidden}
+.tc-head{padding:14px 18px;border-bottom:1px solid #f4f6fb;display:flex;align-items:center;justify-content:space-between}
+.tc-title{font-size:12px;font-weight:600;color:#040e22}
+.search-wrap{display:flex;align-items:center;gap:8px;border:1px solid #eaeff8;border-radius:8px;padding:0 10px;height:32px;background:#f8fafc}
+.search-wrap i{font-size:14px;color:#c4cdd8}
+.search-wrap input{border:none;background:none;outline:none;font-size:11px;font-family:'Inter',sans-serif;color:#040e22;width:130px}
+.search-wrap input::placeholder{color:#c4cdd8}
+table{width:100%;border-collapse:collapse}
+th{font-size:10px;font-weight:600;letter-spacing:0.8px;text-transform:uppercase;color:#b0bec8;padding:9px 18px;text-align:left;border-bottom:1px solid #f4f6fb}
+td{padding:11px 18px;font-size:12px;color:#040e22;border-bottom:1px solid #f9fafb}
+tr:last-child td{border-bottom:none}
+.td-m{color:#94a3b8;font-size:11px}
+.user-cell{display:flex;align-items:center;gap:9px}
+.av{width:28px;height:28px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:9px;font-weight:600;color:#fff;flex-shrink:0}
+.av1{background:#2563ff}.av2{background:#7c3aed}.av3{background:#059669}.av4{background:#d97706}.av5{background:#dc2626}
+.u-name{font-size:12px;font-weight:500;color:#040e22}
+.u-email{font-size:10px;color:#94a3b8;margin-top:1px}
+.badge{font-size:9px;font-weight:600;padding:2px 8px;border-radius:100px}
+.badge-admin{background:#eff4ff;color:#2563ff}
+.badge-user{background:#f4f6fb;color:#64748b}
+.badge-active{background:#effaf4;color:#16a34a}
+.badge-inactive{background:#fef2f2;color:#dc2626}
+.act-wrap{display:flex;align-items:center;gap:6px}
+.act-btn{background:none;border:1px solid #eaeff8;border-radius:7px;padding:4px 10px;font-size:10px;color:#64748b;font-family:'Inter',sans-serif;cursor:pointer;display:flex;align-items:center;gap:4px}
+.act-btn i{font-size:12px}
+.act-btn.danger{color:#dc2626;border-color:#fecaca}
+</style>
+<div class="app">
+  <div class="sb">
+    <div class="sb-top"><div class="sb-brand"><div class="sb-box"><i class="ti ti-scan" aria-hidden="true"></i></div><div><div class="sb-name">Dentavera</div><div class="sb-org">AcmeCorp Dental</div></div></div></div>
+    <div class="sb-nav">
+      <div class="sb-sec">Admin</div>
+      <div class="sb-item"><i class="ti ti-layout-dashboard" aria-hidden="true"></i>Dashboard</div>
+      <div class="sb-item on"><i class="ti ti-users" aria-hidden="true"></i>Team</div>
+      <div class="sb-item"><i class="ti ti-chart-bar" aria-hidden="true"></i>Usage metrics</div>
+      <div class="sb-item"><i class="ti ti-credit-card" aria-hidden="true"></i>Billing</div>
+      <div class="sb-item"><i class="ti ti-settings" aria-hidden="true"></i>Settings</div>
+    </div>
+    <div class="sb-bot"><div class="sb-av">AD</div><div><div class="sb-un">Admin User</div><div class="sb-ur">System Admin</div></div></div>
+  </div>
+  <div class="main">
+    <div class="top-row">
+      <div>
+        <div class="pg-eyebrow">Screen 3 — Admin</div>
+        <div class="pg-title">Team</div>
+        <div class="pg-sub" style="margin-bottom:0">Manage users and access for your organization</div>
+      </div>
+      <button class="btn-invite"><i class="ti ti-user-plus" aria-hidden="true"></i>Invite user</button>
+    </div>
+    <div class="seat-bar">
+      <div><div class="seat-info">5 of 10 seats used</div><div class="seat-sub">Pro Plan · renews Jul 4, 2025</div></div>
+      <div class="prog-wrap">
+        <div class="prog-bar"><div class="prog-fill" style="width:50%"></div></div>
+        <span class="prog-lbl">5 remaining</span>
+      </div>
+    </div>
+    <div class="table-card">
+      <div class="tc-head">
+        <span class="tc-title">Users <span style="color:#94a3b8;font-weight:400;margin-left:4px">5</span></span>
+        <div class="search-wrap"><i class="ti ti-search" aria-hidden="true"></i><input type="text" placeholder="Search users…"></div>
+      </div>
+      <table>
+        <thead><tr><th>User</th><th>Role</th><th>Status</th><th>Last active</th><th>Simulations</th><th>Actions</th></tr></thead>
+        <tbody>
+          <tr>
+            <td><div class="user-cell"><div class="av av1">JD</div><div><div class="u-name">Jane Doe</div><div class="u-email">jane@acmecorp.com</div></div></div></td>
+            <td><span class="badge badge-user">Standard</span></td>
+            <td><span class="badge badge-active">Active</span></td>
+            <td class="td-m">Jun 4, 2025</td>
+            <td class="td-m" style="font-weight:600;color:#040e22">42</td>
+            <td><div class="act-wrap"><button class="act-btn"><i class="ti ti-edit" aria-hidden="true"></i>Edit</button><button class="act-btn danger"><i class="ti ti-user-minus" aria-hidden="true"></i>Remove</button></div></td>
+          </tr>
+          <tr>
+            <td><div class="user-cell"><div class="av av2">JS</div><div><div class="u-name">John Smith</div><div class="u-email">john@acmecorp.com</div></div></div></td>
+            <td><span class="badge badge-user">Standard</span></td>
+            <td><span class="badge badge-active">Active</span></td>
+            <td class="td-m">Jun 3, 2025</td>
+            <td class="td-m" style="font-weight:600;color:#040e22">28</td>
+            <td><div class="act-wrap"><button class="act-btn"><i class="ti ti-edit" aria-hidden="true"></i>Edit</button><button class="act-btn danger"><i class="ti ti-user-minus" aria-hidden="true"></i>Remove</button></div></td>
+          </tr>
+          <tr>
+            <td><div class="user-cell"><div class="av av3">EC</div><div><div class="u-name">Emily Chen</div><div class="u-email">emily@acmecorp.com</div></div></div></td>
+            <td><span class="badge badge-user">Standard</span></td>
+            <td><span class="badge badge-active">Active</span></td>
+            <td class="td-m">May 30, 2025</td>
+            <td class="td-m" style="font-weight:600;color:#040e22">15</td>
+            <td><div class="act-wrap"><button class="act-btn"><i class="ti ti-edit" aria-hidden="true"></i>Edit</button><button class="act-btn danger"><i class="ti ti-user-minus" aria-hidden="true"></i>Remove</button></div></td>
+          </tr>
+          <tr>
+            <td><div class="user-cell"><div class="av av4">MB</div><div><div class="u-name">Michael Brown</div><div class="u-email">michael@acmecorp.com</div></div></div></td>
+            <td><span class="badge badge-user">Standard</span></td>
+            <td><span class="badge badge-active">Active</span></td>
+            <td class="td-m">May 25, 2025</td>
+            <td class="td-m" style="font-weight:600;color:#040e22">7</td>
+            <td><div class="act-wrap"><button class="act-btn"><i class="ti ti-edit" aria-hidden="true"></i>Edit</button><button class="act-btn danger"><i class="ti ti-user-minus" aria-hidden="true"></i>Remove</button></div></td>
+          </tr>
+          <tr>
+            <td><div class="user-cell"><div class="av av5">SL</div><div><div class="u-name">Sarah Lee</div><div class="u-email">sarah@acmecorp.com</div></div></div></td>
+            <td><span class="badge badge-user">Standard</span></td>
+            <td><span class="badge badge-inactive">Inactive</span></td>
+            <td class="td-m">May 20, 2025</td>
+            <td class="td-m" style="font-weight:600;color:#040e22">3</td>
+            <td><div class="act-wrap"><button class="act-btn"><i class="ti ti-edit" aria-hidden="true"></i>Edit</button><button class="act-btn danger"><i class="ti ti-user-minus" aria-hidden="true"></i>Remove</button></div></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

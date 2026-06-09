@@ -1,0 +1,107 @@
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Inter',sans-serif}
+.app{display:grid;grid-template-columns:220px 1fr;min-height:740px;background:#f4f6fb}
+.sb{background:#040e22;padding:0;display:flex;flex-direction:column}
+.sb-top{padding:24px 20px 20px;border-bottom:1px solid rgba(255,255,255,0.07)}
+.sb-brand{display:flex;align-items:center;gap:10px}
+.sb-box{width:28px;height:28px;background:#2563ff;border-radius:7px;display:flex;align-items:center;justify-content:center}
+.sb-box i{color:#fff;font-size:13px}
+.sb-name{font-size:14px;font-weight:600;color:#fff;letter-spacing:-0.3px}
+.sb-org{font-size:10px;color:rgba(255,255,255,0.28);margin-top:1px}
+.sb-nav{padding:14px 10px;flex:1}
+.sb-sec{font-size:9px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,0.2);padding:14px 10px 6px}
+.sb-item{display:flex;align-items:center;gap:9px;padding:8px 10px;border-radius:7px;cursor:pointer;color:rgba(255,255,255,0.42);font-size:12px;margin-bottom:1px}
+.sb-item i{font-size:15px;flex-shrink:0}
+.sb-item.on{background:rgba(37,99,255,0.16);color:#fff}
+.sb-item.on i{color:#5b8fff}
+.sb-bot{padding:14px 20px;border-top:1px solid rgba(255,255,255,0.07);display:flex;align-items:center;gap:9px}
+.sb-av{width:30px;height:30px;background:rgba(37,99,255,0.28);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:600;color:#7aaeff;flex-shrink:0}
+.sb-un{font-size:11px;font-weight:500;color:#fff}
+.sb-ur{font-size:10px;color:rgba(255,255,255,0.28)}
+.main{padding:28px 28px;overflow:auto}
+.pg-eyebrow{font-size:9px;font-weight:600;letter-spacing:2.5px;text-transform:uppercase;color:#2563ff;margin-bottom:6px}
+.pg-title{font-size:22px;font-weight:600;color:#040e22;letter-spacing:-0.5px}
+.pg-sub{font-size:12px;color:#94a3b8;margin-top:3px;margin-bottom:24px}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:22px}
+.sc{background:#fff;border-radius:12px;border:1px solid #eaeff8;padding:16px 18px}
+.sc-top{display:flex;align-items:center;justify-content:space-between;margin-bottom:12px}
+.sc-ico{width:30px;height:30px;border-radius:8px;display:flex;align-items:center;justify-content:center}
+.sc-ico i{font-size:14px}
+.ib{background:#eff4ff} .ib i{color:#2563ff}
+.ig{background:#effaf4} .ig i{color:#16a34a}
+.ia{background:#fff8ec} .ia i{color:#d97706}
+.ip{background:#f5f3ff} .ip i{color:#7c3aed}
+.sc-num{font-size:26px;font-weight:600;color:#040e22;letter-spacing:-0.7px;line-height:1}
+.sc-lbl{font-size:10px;color:#94a3b8;margin-top:4px;font-weight:400}
+.tag{font-size:9px;font-weight:600;padding:2px 7px;border-radius:100px}
+.tag-g{background:#effaf4;color:#16a34a}
+.tag-a{background:#fff8ec;color:#d97706}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:12px}
+.card{background:#fff;border-radius:12px;border:1px solid #eaeff8;padding:18px 20px}
+.card-h{font-size:12px;font-weight:600;color:#040e22;margin-bottom:14px;display:flex;align-items:center;justify-content:space-between}
+.card-h a{font-size:10px;color:#2563ff;font-weight:500;text-decoration:none}
+.quick-links{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.ql{background:#f8fafc;border:1px solid #eaeff8;border-radius:9px;padding:12px 14px;cursor:pointer;display:flex;align-items:center;gap:9px}
+.ql i{font-size:16px;color:#64748b}
+.ql-t{font-size:11px;font-weight:500;color:#040e22}
+.ql-s{font-size:10px;color:#94a3b8;margin-top:1px}
+.info-row{display:flex;flex-direction:column;gap:10px}
+.info-item{display:flex;align-items:center;justify-content:space-between;padding:9px 0;border-bottom:1px solid #f4f6fb}
+.info-item:last-child{border-bottom:none}
+.info-k{font-size:11px;color:#94a3b8}
+.info-v{font-size:12px;font-weight:500;color:#040e22}
+.plan-badge{background:#eff4ff;color:#2563ff;font-size:10px;font-weight:600;padding:3px 9px;border-radius:100px}
+.prog-bar{height:4px;background:#eaeff8;border-radius:100px;margin-top:8px;overflow:hidden}
+.prog-fill{height:100%;background:#2563ff;border-radius:100px;width:60%}
+</style>
+<div class="app">
+  <div class="sb">
+    <div class="sb-top">
+      <div class="sb-brand"><div class="sb-box"><i class="ti ti-scan" aria-hidden="true"></i></div><div><div class="sb-name">Dentavera</div><div class="sb-org">AcmeCorp Dental</div></div></div>
+    </div>
+    <div class="sb-nav">
+      <div class="sb-sec">Admin</div>
+      <div class="sb-item on"><i class="ti ti-layout-dashboard" aria-hidden="true"></i>Dashboard</div>
+      <div class="sb-item"><i class="ti ti-users" aria-hidden="true"></i>Team</div>
+      <div class="sb-item"><i class="ti ti-chart-bar" aria-hidden="true"></i>Usage metrics</div>
+      <div class="sb-item"><i class="ti ti-credit-card" aria-hidden="true"></i>Billing</div>
+      <div class="sb-item"><i class="ti ti-settings" aria-hidden="true"></i>Settings</div>
+    </div>
+    <div class="sb-bot"><div class="sb-av">AD</div><div><div class="sb-un">Admin User</div><div class="sb-ur">System Admin</div></div></div>
+  </div>
+  <div class="main">
+    <div class="pg-eyebrow">Screen 2 — Admin</div>
+    <div class="pg-title">Dashboard</div>
+    <div class="pg-sub">Organization overview and administration</div>
+    <div class="stats">
+      <div class="sc"><div class="sc-top"><div class="sc-ico ib"><i class="ti ti-users" aria-hidden="true"></i></div><span class="tag tag-g">Active</span></div><div class="sc-num">5</div><div class="sc-lbl">Active seats</div></div>
+      <div class="sc"><div class="sc-top"><div class="sc-ico ig"><i class="ti ti-brain" aria-hidden="true"></i></div><span class="tag tag-g">+12%</span></div><div class="sc-num">95</div><div class="sc-lbl">Total simulations</div></div>
+      <div class="sc"><div class="sc-top"><div class="sc-ico ia"><i class="ti ti-calendar" aria-hidden="true"></i></div></div><div class="sc-num">38</div><div class="sc-lbl">This month</div></div>
+      <div class="sc"><div class="sc-top"><div class="sc-ico ip"><i class="ti ti-credit-card" aria-hidden="true"></i></div><span class="tag tag-g">Pro</span></div><div class="sc-num">10</div><div class="sc-lbl">Seats purchased</div></div>
+    </div>
+    <div class="grid2">
+      <div class="card">
+        <div class="card-h">Organization overview</div>
+        <div class="info-row">
+          <div class="info-item"><span class="info-k">Clinic name</span><span class="info-v">AcmeCorp Dental</span></div>
+          <div class="info-item"><span class="info-k">Plan</span><span class="plan-badge">Pro</span></div>
+          <div class="info-item"><span class="info-k">Subscription status</span><span class="info-v" style="color:#16a34a">Active</span></div>
+          <div class="info-item"><span class="info-k">Seats used</span><span class="info-v">5 / 10</span></div>
+          <div class="info-item" style="flex-direction:column;align-items:flex-start;gap:4px"><div style="display:flex;width:100%;justify-content:space-between"><span class="info-k">Seat usage</span><span class="info-k">50%</span></div><div class="prog-bar"><div class="prog-fill"></div></div></div>
+          <div class="info-item"><span class="info-k">Next renewal</span><span class="info-v">Jul 4, 2025</span></div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-h">Quick links</div>
+        <div class="quick-links">
+          <div class="ql"><i class="ti ti-users" aria-hidden="true"></i><div><div class="ql-t">Team</div><div class="ql-s">Manage users</div></div></div>
+          <div class="ql"><i class="ti ti-chart-bar" aria-hidden="true"></i><div><div class="ql-t">Usage</div><div class="ql-s">View metrics</div></div></div>
+          <div class="ql"><i class="ti ti-credit-card" aria-hidden="true"></i><div><div class="ql-t">Billing</div><div class="ql-s">Stripe portal</div></div></div>
+          <div class="ql"><i class="ti ti-settings" aria-hidden="true"></i><div><div class="ql-t">Settings</div><div class="ql-s">Org details</div></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

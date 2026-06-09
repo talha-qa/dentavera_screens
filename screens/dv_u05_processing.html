@@ -1,0 +1,80 @@
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Inter',sans-serif}
+.app{display:grid;grid-template-columns:220px 1fr;min-height:740px;background:#f4f6fb}
+.sb{background:#040e22;padding:0;display:flex;flex-direction:column}
+.sb-top{padding:24px 20px 20px;border-bottom:1px solid rgba(255,255,255,0.07)}
+.sb-brand{display:flex;align-items:center;gap:10px}
+.sb-box{width:28px;height:28px;background:#2563ff;border-radius:7px;display:flex;align-items:center;justify-content:center}
+.sb-box i{color:#fff;font-size:13px}
+.sb-name{font-size:14px;font-weight:600;color:#fff;letter-spacing:-0.3px}
+.sb-org{font-size:10px;color:rgba(255,255,255,0.28);margin-top:1px}
+.sb-nav{padding:14px 10px;flex:1}
+.sb-sec{font-size:9px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,0.2);padding:14px 10px 6px}
+.sb-item{display:flex;align-items:center;gap:9px;padding:8px 10px;border-radius:7px;cursor:pointer;color:rgba(255,255,255,0.42);font-size:12px;margin-bottom:1px}
+.sb-item i{font-size:15px;flex-shrink:0}
+.sb-item.on{background:rgba(37,99,255,0.16);color:#fff}
+.sb-item.on i{color:#5b8fff}
+.sb-bot{padding:14px 20px;border-top:1px solid rgba(255,255,255,0.07);display:flex;align-items:center;gap:9px}
+.sb-av{width:30px;height:30px;background:rgba(37,99,255,0.28);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:600;color:#7aaeff;flex-shrink:0}
+.sb-un{font-size:11px;font-weight:500;color:#fff}
+.sb-ur{font-size:10px;color:rgba(255,255,255,0.28)}
+.main{padding:28px 28px;overflow:auto;display:flex;flex-direction:column;align-items:center;justify-content:center}
+.pg-eyebrow{font-size:9px;font-weight:600;letter-spacing:2.5px;text-transform:uppercase;color:#2563ff;margin-bottom:6px;text-align:center}
+.processing-card{background:#fff;border-radius:14px;border:1px solid #eaeff8;padding:48px 40px;width:100%;max-width:480px;text-align:center}
+.spin-wrap{width:72px;height:72px;margin:0 auto 28px;position:relative}
+.spin-ring{width:72px;height:72px;border-radius:50%;border:3px solid #eaeff8;border-top-color:#2563ff;animation:spin 0.9s linear infinite;position:absolute;top:0;left:0}
+@keyframes spin{to{transform:rotate(360deg)}}
+.spin-inner{width:48px;height:48px;background:#eff4ff;border-radius:50%;position:absolute;top:12px;left:12px;display:flex;align-items:center;justify-content:center}
+.spin-inner i{font-size:20px;color:#2563ff}
+.proc-t{font-size:18px;font-weight:600;color:#040e22;letter-spacing:-0.4px;margin-bottom:8px}
+.proc-s{font-size:12px;color:#94a3b8;line-height:1.65;margin-bottom:28px}
+.steps{display:flex;flex-direction:column;gap:8px;margin-bottom:28px;text-align:left}
+.step{display:flex;align-items:center;gap:10px;padding:10px 14px;border-radius:9px;background:#f4f6fb}
+.step.done{background:#effaf4}
+.step.active{background:#eff4ff}
+.step-ico{width:22px;height:22px;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.step.done .step-ico{background:#16a34a}
+.step.active .step-ico{background:#2563ff}
+.step.wait .step-ico{background:#eaeff8}
+.step-ico i{font-size:11px;color:#fff}
+.step.wait .step-ico i{color:#94a3b8}
+.step-t{font-size:11px;font-weight:500;color:#040e22}
+.step.wait .step-t{color:#94a3b8}
+.step-s{font-size:10px;color:#94a3b8;margin-top:1px}
+.step.done .step-s{color:#16a34a}
+.step.active .step-s{color:#2563ff}
+.note{font-size:10px;color:#b0bec8;text-align:center}
+</style>
+<div class="app">
+  <div class="sb">
+    <div class="sb-top"><div class="sb-brand"><div class="sb-box"><i class="ti ti-scan" aria-hidden="true"></i></div><div><div class="sb-name">Dentavera</div><div class="sb-org">AcmeCorp Dental</div></div></div></div>
+    <div class="sb-nav">
+      <div class="sb-sec">Workspace</div>
+      <div class="sb-item"><i class="ti ti-layout-dashboard" aria-hidden="true"></i>Dashboard</div>
+      <div class="sb-item on"><i class="ti ti-brain" aria-hidden="true"></i>New simulation</div>
+      <div class="sb-item"><i class="ti ti-history" aria-hidden="true"></i>My simulations</div>
+      <div class="sb-item"><i class="ti ti-user" aria-hidden="true"></i>Profile</div>
+    </div>
+    <div class="sb-bot"><div class="sb-av">JD</div><div><div class="sb-un">Jane Doe</div><div class="sb-ur">Standard user</div></div></div>
+  </div>
+  <div class="main">
+    <div class="pg-eyebrow">Screen 5 — User</div>
+    <div class="processing-card">
+      <div class="spin-wrap">
+        <div class="spin-ring"></div>
+        <div class="spin-inner"><i class="ti ti-brain" aria-hidden="true"></i></div>
+      </div>
+      <div class="proc-t">Preparing simulation…</div>
+      <div class="proc-s">Your whitening simulation is being processed.<br>This usually takes 10–20 seconds.</div>
+      <div class="steps">
+        <div class="step done"><div class="step-ico"><i class="ti ti-check" aria-hidden="true"></i></div><div><div class="step-t">Image uploaded</div><div class="step-s">Complete</div></div></div>
+        <div class="step done"><div class="step-ico"><i class="ti ti-check" aria-hidden="true"></i></div><div><div class="step-t">Image analysed</div><div class="step-s">Complete</div></div></div>
+        <div class="step active"><div class="step-ico"><i class="ti ti-loader" aria-hidden="true"></i></div><div><div class="step-t">Applying simulation</div><div class="step-s">In progress…</div></div></div>
+        <div class="step wait"><div class="step-ico"><i class="ti ti-photo" aria-hidden="true"></i></div><div><div class="step-t">Generating result</div><div class="step-s">Waiting</div></div></div>
+      </div>
+      <div class="note">Please keep this window open</div>
+    </div>
+  </div>
+</div>

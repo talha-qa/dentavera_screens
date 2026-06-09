@@ -1,0 +1,92 @@
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Inter',sans-serif}
+.app{display:grid;grid-template-columns:220px 1fr;min-height:740px;background:#f4f6fb}
+.sb{background:#040e22;padding:0;display:flex;flex-direction:column}
+.sb-top{padding:24px 20px 20px;border-bottom:1px solid rgba(255,255,255,0.07)}
+.sb-brand{display:flex;align-items:center;gap:10px}
+.sb-box{width:28px;height:28px;background:#2563ff;border-radius:7px;display:flex;align-items:center;justify-content:center}
+.sb-box i{color:#fff;font-size:13px}
+.sb-name{font-size:14px;font-weight:600;color:#fff;letter-spacing:-0.3px}
+.sb-org{font-size:10px;color:rgba(255,255,255,0.28);margin-top:1px}
+.sb-nav{padding:14px 10px;flex:1}
+.sb-sec{font-size:9px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,0.2);padding:14px 10px 6px}
+.sb-item{display:flex;align-items:center;gap:9px;padding:8px 10px;border-radius:7px;cursor:pointer;color:rgba(255,255,255,0.42);font-size:12px;margin-bottom:1px}
+.sb-item i{font-size:15px;flex-shrink:0}
+.sb-item.on{background:rgba(37,99,255,0.16);color:#fff}
+.sb-item.on i{color:#5b8fff}
+.sb-bot{padding:14px 20px;border-top:1px solid rgba(255,255,255,0.07);display:flex;align-items:center;gap:9px}
+.sb-av{width:30px;height:30px;background:rgba(37,99,255,0.28);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:600;color:#7aaeff;flex-shrink:0}
+.sb-un{font-size:11px;font-weight:500;color:#fff}
+.sb-ur{font-size:10px;color:rgba(255,255,255,0.28)}
+.main{padding:28px 28px;overflow:auto}
+.pg-eyebrow{font-size:9px;font-weight:600;letter-spacing:2.5px;text-transform:uppercase;color:#2563ff;margin-bottom:6px}
+.pg-title{font-size:22px;font-weight:600;color:#040e22;letter-spacing:-0.5px}
+.pg-sub{font-size:12px;color:#94a3b8;margin-top:3px;margin-bottom:20px}
+.top-row{display:flex;align-items:center;justify-content:space-between;margin-bottom:18px}
+.btn-back{background:#fff;border:1px solid #eaeff8;border-radius:9px;padding:8px 14px;font-size:11px;font-weight:500;color:#040e22;font-family:'Inter',sans-serif;cursor:pointer;display:flex;align-items:center;gap:6px}
+.btn-back i{font-size:13px;color:#64748b}
+.btn-export{background:#2563ff;color:#fff;border:none;border-radius:9px;padding:8px 16px;font-size:11px;font-weight:500;font-family:'Inter',sans-serif;cursor:pointer;display:flex;align-items:center;gap:6px}
+.btn-export i{font-size:13px}
+.compare-card{background:#040e22;border-radius:14px;overflow:hidden;position:relative;margin-bottom:16px}
+.compare-inner{width:100%;aspect-ratio:16/7;display:grid;grid-template-columns:1fr 1fr;position:relative}
+.compare-half{display:flex;align-items:center;justify-content:center}
+.compare-half i{font-size:60px;opacity:0.08;color:#fff}
+.clabel{position:absolute;bottom:16px;padding:5px 12px;border-radius:6px;background:rgba(255,255,255,0.1);font-size:10px;font-weight:600;color:rgba(255,255,255,0.7);letter-spacing:1px;text-transform:uppercase}
+.clabel-l{left:16px}
+.clabel-r{right:16px}
+.slider-line{position:absolute;top:0;left:50%;transform:translateX(-50%);width:2px;height:100%;background:rgba(255,255,255,0.4);pointer-events:none}
+.slider-handle{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:36px;height:36px;background:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 2px 12px rgba(0,0,0,0.3);cursor:grab}
+.slider-handle i{font-size:14px;color:#040e22}
+.slider-control{width:100%;margin:0 0 16px}
+.slider-control input[type=range]{width:100%;height:4px;accent-color:#2563ff}
+.slider-labels{display:flex;justify-content:space-between;font-size:10px;color:#94a3b8;margin-top:4px}
+.disclaimer{background:#f4f6fb;border-radius:10px;padding:11px 14px;display:flex;align-items:flex-start;gap:9px}
+.disclaimer i{font-size:14px;color:#94a3b8;flex-shrink:0;margin-top:1px}
+.disclaimer span{font-size:10px;color:#94a3b8;line-height:1.6}
+</style>
+<div class="app">
+  <div class="sb">
+    <div class="sb-top"><div class="sb-brand"><div class="sb-box"><i class="ti ti-scan" aria-hidden="true"></i></div><div><div class="sb-name">Dentavera</div><div class="sb-org">AcmeCorp Dental</div></div></div></div>
+    <div class="sb-nav">
+      <div class="sb-sec">Workspace</div>
+      <div class="sb-item"><i class="ti ti-layout-dashboard" aria-hidden="true"></i>Dashboard</div>
+      <div class="sb-item on"><i class="ti ti-brain" aria-hidden="true"></i>New simulation</div>
+      <div class="sb-item"><i class="ti ti-history" aria-hidden="true"></i>My simulations</div>
+      <div class="sb-item"><i class="ti ti-user" aria-hidden="true"></i>Profile</div>
+    </div>
+    <div class="sb-bot"><div class="sb-av">JD</div><div><div class="sb-un">Jane Doe</div><div class="sb-ur">Standard user</div></div></div>
+  </div>
+  <div class="main">
+    <div class="top-row">
+      <div>
+        <div class="pg-eyebrow">Screen 7 — User</div>
+        <div class="pg-title">Compare</div>
+        <div class="pg-sub" style="margin-bottom:0">Drag the slider to compare before and after</div>
+      </div>
+      <div style="display:flex;gap:8px">
+        <button class="btn-back"><i class="ti ti-arrow-left" aria-hidden="true"></i>Back to result</button>
+        <button class="btn-export"><i class="ti ti-download" aria-hidden="true"></i>Export</button>
+      </div>
+    </div>
+    <div class="compare-card">
+      <div class="compare-inner">
+        <div class="compare-half"><i class="ti ti-photo" aria-hidden="true"></i></div>
+        <div class="compare-half"><i class="ti ti-sparkles" aria-hidden="true"></i></div>
+        <div class="clabel clabel-l">Before</div>
+        <div class="clabel clabel-r">After</div>
+        <div class="slider-line"></div>
+        <div class="slider-handle"><i class="ti ti-arrows-left-right" aria-hidden="true"></i></div>
+      </div>
+    </div>
+    <div class="slider-control">
+      <input type="range" min="0" max="100" value="50">
+      <div class="slider-labels"><span>Before</span><span>After</span></div>
+    </div>
+    <div class="disclaimer">
+      <i class="ti ti-info-circle" aria-hidden="true"></i>
+      <span>Simulation only. This visual aid does not replace clinical diagnosis or professional judgment.</span>
+    </div>
+  </div>
+</div>

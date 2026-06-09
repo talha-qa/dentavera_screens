@@ -1,0 +1,90 @@
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Inter',sans-serif}
+.app{display:grid;grid-template-columns:220px 1fr;min-height:740px;background:#f4f6fb}
+.sb{background:#040e22;padding:0;display:flex;flex-direction:column}
+.sb-top{padding:24px 20px 20px;border-bottom:1px solid rgba(255,255,255,0.07)}
+.sb-brand{display:flex;align-items:center;gap:10px}
+.sb-box{width:28px;height:28px;background:#2563ff;border-radius:7px;display:flex;align-items:center;justify-content:center}
+.sb-box i{color:#fff;font-size:13px}
+.sb-name{font-size:14px;font-weight:600;color:#fff;letter-spacing:-0.3px}
+.sb-org{font-size:10px;color:rgba(255,255,255,0.28);margin-top:1px}
+.sb-nav{padding:14px 10px;flex:1}
+.sb-sec{font-size:9px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,0.2);padding:14px 10px 6px}
+.sb-item{display:flex;align-items:center;gap:9px;padding:8px 10px;border-radius:7px;cursor:pointer;color:rgba(255,255,255,0.42);font-size:12px;margin-bottom:1px}
+.sb-item i{font-size:15px;flex-shrink:0}
+.sb-item.on{background:rgba(37,99,255,0.16);color:#fff}
+.sb-item.on i{color:#5b8fff}
+.sb-bot{padding:14px 20px;border-top:1px solid rgba(255,255,255,0.07);display:flex;align-items:center;gap:9px}
+.sb-av{width:30px;height:30px;background:rgba(37,99,255,0.28);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:600;color:#7aaeff;flex-shrink:0}
+.sb-un{font-size:11px;font-weight:500;color:#fff}
+.sb-ur{font-size:10px;color:rgba(255,255,255,0.28)}
+.main{padding:28px 28px;overflow:auto}
+.pg-eyebrow{font-size:9px;font-weight:600;letter-spacing:2.5px;text-transform:uppercase;color:#2563ff;margin-bottom:6px}
+.pg-title{font-size:22px;font-weight:600;color:#040e22;letter-spacing:-0.5px}
+.pg-sub{font-size:12px;color:#94a3b8;margin-top:3px;margin-bottom:24px}
+.profile-header{background:#fff;border-radius:12px;border:1px solid #eaeff8;padding:20px 22px;margin-bottom:16px;display:flex;align-items:center;gap:18px}
+.ph-av{width:60px;height:60px;background:rgba(37,99,255,0.12);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:20px;font-weight:600;color:#2563ff;flex-shrink:0}
+.ph-name{font-size:16px;font-weight:600;color:#040e22;letter-spacing:-0.3px}
+.ph-email{font-size:12px;color:#94a3b8;margin-top:2px}
+.ph-role{display:inline-block;margin-top:6px;background:#eff4ff;color:#2563ff;font-size:9px;font-weight:600;padding:2px 8px;border-radius:100px}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.card{background:#fff;border-radius:12px;border:1px solid #eaeff8;padding:18px 20px}
+.card-h{font-size:12px;font-weight:600;color:#040e22;margin-bottom:16px}
+.field{margin-bottom:14px}
+.fl{display:block;font-size:10px;font-weight:600;letter-spacing:1.2px;text-transform:uppercase;color:#64748b;margin-bottom:6px}
+.fi{display:flex;align-items:center;gap:10px;border:1px solid #e2e8f2;border-radius:10px;padding:0 14px;height:42px;background:#fafbfd}
+.fi input{border:none;background:none;outline:none;font-size:13px;font-family:'Inter',sans-serif;color:#040e22;width:100%}
+.fi input::placeholder{color:#c8d2df}
+.fi-static{background:#f4f6fb;border-color:#eaeff8}
+.fi-static input{color:#94a3b8;cursor:default}
+.fi i{font-size:14px;color:#c4cdd8;flex-shrink:0}
+.btn-save{background:#2563ff;color:#fff;border:none;border-radius:9px;padding:9px 20px;font-size:12px;font-weight:500;font-family:'Inter',sans-serif;cursor:pointer;margin-top:4px}
+.btn-logout{width:100%;margin-top:14px;height:42px;background:#fef2f2;border:1px solid #fecaca;border-radius:9px;color:#dc2626;font-size:12px;font-weight:500;font-family:'Inter',sans-serif;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:7px}
+.btn-logout i{font-size:15px}
+</style>
+<div class="app">
+  <div class="sb">
+    <div class="sb-top"><div class="sb-brand"><div class="sb-box"><i class="ti ti-scan" aria-hidden="true"></i></div><div><div class="sb-name">Dentavera</div><div class="sb-org">AcmeCorp Dental</div></div></div></div>
+    <div class="sb-nav">
+      <div class="sb-sec">Workspace</div>
+      <div class="sb-item"><i class="ti ti-layout-dashboard" aria-hidden="true"></i>Dashboard</div>
+      <div class="sb-item"><i class="ti ti-brain" aria-hidden="true"></i>New simulation</div>
+      <div class="sb-item"><i class="ti ti-history" aria-hidden="true"></i>My simulations</div>
+      <div class="sb-item on"><i class="ti ti-user" aria-hidden="true"></i>Profile</div>
+    </div>
+    <div class="sb-bot"><div class="sb-av">JD</div><div><div class="sb-un">Jane Doe</div><div class="sb-ur">Standard user</div></div></div>
+  </div>
+  <div class="main">
+    <div class="pg-eyebrow">Screen 9 — User</div>
+    <div class="pg-title">Profile</div>
+    <div class="pg-sub">Manage your account details</div>
+    <div class="profile-header">
+      <div class="ph-av">JD</div>
+      <div><div class="ph-name">Jane Doe</div><div class="ph-email">jane@acmecorp.com</div><span class="ph-role">Standard user</span></div>
+    </div>
+    <div class="grid2">
+      <div class="card">
+        <div class="card-h">Personal information</div>
+        <div class="field"><label class="fl">Full name</label><div class="fi"><input type="text" value="Jane Doe"></div></div>
+        <div class="field"><label class="fl">Email address</label><div class="fi fi-static"><input type="email" value="jane@acmecorp.com" readonly></div></div>
+        <div class="field"><label class="fl">Organization</label><div class="fi fi-static"><input type="text" value="AcmeCorp Dental" readonly></div></div>
+        <button class="btn-save">Save changes</button>
+      </div>
+      <div>
+        <div class="card" style="margin-bottom:14px">
+          <div class="card-h">Change password</div>
+          <div class="field"><label class="fl">Current password</label><div class="fi"><i class="ti ti-lock" aria-hidden="true"></i><input type="password" placeholder="••••••••"></div></div>
+          <div class="field"><label class="fl">New password</label><div class="fi"><i class="ti ti-lock" aria-hidden="true"></i><input type="password" placeholder="••••••••"></div></div>
+          <div class="field"><label class="fl">Confirm new password</label><div class="fi"><i class="ti ti-lock" aria-hidden="true"></i><input type="password" placeholder="••••••••"></div></div>
+          <button class="btn-save">Update password</button>
+        </div>
+        <div class="card">
+          <div class="card-h">Session</div>
+          <button class="btn-logout"><i class="ti ti-logout" aria-hidden="true"></i>Log out</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

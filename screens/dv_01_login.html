@@ -1,0 +1,76 @@
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Inter',sans-serif}
+.pg{display:grid;grid-template-columns:1.1fr 1fr;min-height:680px}
+.left{background:#040e22;padding:56px 52px;display:flex;flex-direction:column;justify-content:space-between;position:relative;overflow:hidden}
+.left::before{content:'';position:absolute;top:-80px;right:-80px;width:320px;height:320px;border-radius:50%;background:rgba(37,99,255,0.06);pointer-events:none}
+.left::after{content:'';position:absolute;bottom:-60px;left:-40px;width:220px;height:220px;border-radius:50%;background:rgba(37,99,255,0.04);pointer-events:none}
+.wordmark{display:flex;align-items:center;gap:11px;margin-bottom:52px}
+.wm-box{width:34px;height:34px;background:#2563ff;border-radius:9px;display:flex;align-items:center;justify-content:center}
+.wm-box i{color:#fff;font-size:15px}
+.wm-t{font-size:18px;font-weight:600;color:#fff;letter-spacing:-0.4px}
+.hero{margin-bottom:40px}
+.hero-eyebrow{font-size:10px;font-weight:500;letter-spacing:3px;text-transform:uppercase;color:rgba(255,255,255,0.25);margin-bottom:20px}
+.hero-h{font-size:36px;font-weight:300;color:#fff;line-height:1.22;letter-spacing:-1px;margin-bottom:16px}
+.hero-h strong{font-weight:600}
+.hero-p{font-size:13px;color:rgba(255,255,255,0.32);line-height:1.75;max-width:290px}
+.pills{display:flex;gap:7px;flex-wrap:wrap}
+.pill{background:rgba(255,255,255,0.05);border:0.5px solid rgba(255,255,255,0.09);border-radius:100px;padding:5px 13px;font-size:10px;color:rgba(255,255,255,0.35);letter-spacing:0.3px}
+.right{background:#fff;padding:56px 52px;display:flex;flex-direction:column;justify-content:center}
+.form-eyebrow{font-size:10px;font-weight:600;letter-spacing:3px;text-transform:uppercase;color:#2563ff;margin-bottom:14px}
+.form-h{font-size:28px;font-weight:600;color:#040e22;letter-spacing:-0.7px;line-height:1.2;margin-bottom:6px}
+.form-sub{font-size:13px;color:#94a3b8;margin-bottom:38px}
+.field{margin-bottom:18px}
+.fl{display:block;font-size:10px;font-weight:600;letter-spacing:1.2px;text-transform:uppercase;color:#64748b;margin-bottom:8px}
+.fi{display:flex;align-items:center;gap:10px;border:1px solid #e2e8f2;border-radius:12px;padding:0 16px;height:52px;background:#fafbfd;transition:border 0.15s,background 0.15s}
+.fi:focus-within{border-color:#2563ff;background:#fff}
+.fi i{font-size:16px;color:#c4cdd8;flex-shrink:0}
+.fi input{border:none;background:none;outline:none;font-size:14px;font-family:'Inter',sans-serif;color:#040e22;width:100%}
+.fi input::placeholder{color:#c8d2df}
+.fi-eye{cursor:pointer;color:#c4cdd8;font-size:15px;flex-shrink:0}
+.forgot{text-align:right;margin-top:-10px;margin-bottom:22px}
+.forgot a{font-size:11px;color:#2563ff;text-decoration:none;font-weight:500}
+.btn{width:100%;height:52px;background:#040e22;border:none;border-radius:12px;color:#fff;font-size:14px;font-weight:500;font-family:'Inter',sans-serif;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:8px;letter-spacing:0.1px}
+.btn i{font-size:15px}
+.sep{display:flex;align-items:center;gap:12px;margin:22px 0 18px}
+.sep-l{flex:1;height:1px;background:#f0f3f8}
+.sep-t{font-size:10px;color:#c4cdd8;letter-spacing:0.5px;white-space:nowrap}
+.cred{background:#f8fafc;border:1px solid #eef2f9;border-radius:12px;padding:14px 18px}
+.cred-row{display:flex;align-items:center;justify-content:space-between;padding:3px 0}
+.cred-k{font-size:11px;color:#94a3b8;font-weight:500}
+.cred-v{font-size:11px;color:#2563ff;font-weight:400}
+.cred-note{font-size:10px;color:#c4cdd8;margin-top:9px;padding-top:9px;border-top:1px solid #eef2f9;line-height:1.5}
+.screen-label{position:absolute;top:16px;left:50%;transform:translateX(-50%);font-size:9px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,0.2)}
+</style>
+<div class="pg">
+  <div class="left">
+    <div class="screen-label">Screen 1 — Login</div>
+    <div>
+      <div class="wordmark"><div class="wm-box"><i class="ti ti-scan" aria-hidden="true"></i></div><span class="wm-t">Dentavera</span></div>
+      <div class="hero">
+        <div class="hero-eyebrow">Dental AI Visualization</div>
+        <div class="hero-h">Precision imaging<br>for <strong>modern dental</strong><br>practice.</div>
+        <p class="hero-p">AI-powered simulations trusted by dental professionals for clear, convincing patient consultations.</p>
+      </div>
+    </div>
+    <div class="pills">
+      <span class="pill">Whitening</span><span class="pill">Alignment</span><span class="pill">Restoration</span><span class="pill">Gum Health</span><span class="pill">Occlusal Wear</span>
+    </div>
+  </div>
+  <div class="right">
+    <div class="form-eyebrow">Secure access</div>
+    <div class="form-h">Welcome back</div>
+    <p class="form-sub">Sign in to your Dentavera workspace</p>
+    <div class="field"><label class="fl">Email address</label><div class="fi"><i class="ti ti-mail" aria-hidden="true"></i><input type="email" placeholder="you@clinic.com" value="admin@dentavera.com"/></div></div>
+    <div class="field"><label class="fl">Password</label><div class="fi"><i class="ti ti-lock" aria-hidden="true"></i><input type="password" value="••••••••"/><i class="ti ti-eye fi-eye" aria-hidden="true"></i></div></div>
+    <div class="forgot"><a href="#">Forgot password?</a></div>
+    <button class="btn"><span>Continue</span><i class="ti ti-arrow-right" aria-hidden="true"></i></button>
+    <div class="sep"><div class="sep-l"></div><span class="sep-t">Demo credentials</span><div class="sep-l"></div></div>
+    <div class="cred">
+      <div class="cred-row"><span class="cred-k">Admin</span><span class="cred-v">admin@dentavera.com</span></div>
+      <div class="cred-row"><span class="cred-k">Standard user</span><span class="cred-v">user@dentavera.com</span></div>
+      <div class="cred-note">Any password works for demo login</div>
+    </div>
+  </div>
+</div>

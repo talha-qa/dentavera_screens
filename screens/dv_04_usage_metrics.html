@@ -1,0 +1,112 @@
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Inter',sans-serif}
+.app{display:grid;grid-template-columns:220px 1fr;min-height:740px;background:#f4f6fb}
+.sb{background:#040e22;padding:0;display:flex;flex-direction:column}
+.sb-top{padding:24px 20px 20px;border-bottom:1px solid rgba(255,255,255,0.07)}
+.sb-brand{display:flex;align-items:center;gap:10px}
+.sb-box{width:28px;height:28px;background:#2563ff;border-radius:7px;display:flex;align-items:center;justify-content:center}
+.sb-box i{color:#fff;font-size:13px}
+.sb-name{font-size:14px;font-weight:600;color:#fff;letter-spacing:-0.3px}
+.sb-org{font-size:10px;color:rgba(255,255,255,0.28);margin-top:1px}
+.sb-nav{padding:14px 10px;flex:1}
+.sb-sec{font-size:9px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,0.2);padding:14px 10px 6px}
+.sb-item{display:flex;align-items:center;gap:9px;padding:8px 10px;border-radius:7px;cursor:pointer;color:rgba(255,255,255,0.42);font-size:12px;margin-bottom:1px}
+.sb-item i{font-size:15px;flex-shrink:0}
+.sb-item.on{background:rgba(37,99,255,0.16);color:#fff}
+.sb-item.on i{color:#5b8fff}
+.sb-bot{padding:14px 20px;border-top:1px solid rgba(255,255,255,0.07);display:flex;align-items:center;gap:9px}
+.sb-av{width:30px;height:30px;background:rgba(37,99,255,0.28);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:600;color:#7aaeff;flex-shrink:0}
+.sb-un{font-size:11px;font-weight:500;color:#fff}
+.sb-ur{font-size:10px;color:rgba(255,255,255,0.28)}
+.main{padding:28px 28px}
+.pg-eyebrow{font-size:9px;font-weight:600;letter-spacing:2.5px;text-transform:uppercase;color:#2563ff;margin-bottom:6px}
+.pg-title{font-size:22px;font-weight:600;color:#040e22;letter-spacing:-0.5px}
+.pg-sub{font-size:12px;color:#94a3b8;margin-top:3px;margin-bottom:24px}
+.row-top{display:flex;align-items:center;justify-content:space-between;margin-bottom:24px}
+.btn-exp{background:#040e22;color:#fff;border:none;border-radius:9px;padding:8px 16px;font-size:11px;font-weight:500;font-family:'Inter',sans-serif;cursor:pointer;display:flex;align-items:center;gap:6px}
+.btn-exp i{font-size:13px}
+.filter-tabs{display:flex;gap:2px;background:#eaeff8;border-radius:8px;padding:3px}
+.ft{padding:5px 14px;border-radius:6px;font-size:11px;font-weight:500;font-family:'Inter',sans-serif;border:none;cursor:pointer;background:none;color:#64748b}
+.ft.on{background:#fff;color:#040e22;box-shadow:0 1px 3px rgba(0,0,0,0.07)}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:22px}
+.sc{background:#fff;border-radius:12px;border:1px solid #eaeff8;padding:16px 18px}
+.sc-ico{width:30px;height:30px;border-radius:8px;display:flex;align-items:center;justify-content:center;margin-bottom:12px}
+.sc-ico i{font-size:14px}
+.ib{background:#eff4ff} .ib i{color:#2563ff}
+.ig{background:#effaf4} .ig i{color:#16a34a}
+.ia{background:#fff8ec} .ia i{color:#d97706}
+.ir{background:#fef2f2} .ir i{color:#dc2626}
+.sc-num{font-size:26px;font-weight:600;color:#040e22;letter-spacing:-0.7px}
+.sc-lbl{font-size:10px;color:#94a3b8;margin-top:4px}
+.chart-card{background:#fff;border-radius:12px;border:1px solid #eaeff8;padding:18px 20px;margin-bottom:12px}
+.ch-title{font-size:12px;font-weight:600;color:#040e22;margin-bottom:16px}
+.bar-chart{display:flex;align-items:flex-end;gap:8px;height:100px}
+.bar-col{display:flex;flex-direction:column;align-items:center;gap:5px;flex:1}
+.bar{background:#eff4ff;border-radius:4px 4px 0 0;width:100%;border:1px solid #dbeafe;transition:background 0.2s}
+.bar.hi{background:#2563ff;border-color:#1d4ed8}
+.bar-lbl{font-size:9px;color:#94a3b8}
+.table-card{background:#fff;border-radius:12px;border:1px solid #eaeff8;overflow:hidden}
+.tc-head{padding:14px 18px;border-bottom:1px solid #f4f6fb;font-size:12px;font-weight:600;color:#040e22}
+table{width:100%;border-collapse:collapse}
+th{font-size:10px;font-weight:600;letter-spacing:0.8px;text-transform:uppercase;color:#b0bec8;padding:9px 18px;text-align:left;border-bottom:1px solid #f4f6fb}
+td{padding:11px 18px;font-size:12px;color:#040e22;border-bottom:1px solid #f9fafb}
+tr:last-child td{border-bottom:none}
+.td-m{color:#94a3b8;font-size:11px}
+.td-b{font-weight:600;color:#2563ff}
+</style>
+<div class="app">
+  <div class="sb">
+    <div class="sb-top"><div class="sb-brand"><div class="sb-box"><i class="ti ti-scan" aria-hidden="true"></i></div><div><div class="sb-name">Dentavera</div><div class="sb-org">AcmeCorp Dental</div></div></div></div>
+    <div class="sb-nav">
+      <div class="sb-sec">Admin</div>
+      <div class="sb-item"><i class="ti ti-layout-dashboard" aria-hidden="true"></i>Dashboard</div>
+      <div class="sb-item"><i class="ti ti-users" aria-hidden="true"></i>Team</div>
+      <div class="sb-item on"><i class="ti ti-chart-bar" aria-hidden="true"></i>Usage metrics</div>
+      <div class="sb-item"><i class="ti ti-credit-card" aria-hidden="true"></i>Billing</div>
+      <div class="sb-item"><i class="ti ti-settings" aria-hidden="true"></i>Settings</div>
+    </div>
+    <div class="sb-bot"><div class="sb-av">AD</div><div><div class="sb-un">Admin User</div><div class="sb-ur">System Admin</div></div></div>
+  </div>
+  <div class="main">
+    <div class="pg-eyebrow">Screen 4 — Admin</div>
+    <div class="row-top">
+      <div><div class="pg-title">Usage metrics</div><div class="pg-sub">Organization-level simulation consumption</div></div>
+      <div style="display:flex;gap:10px;align-items:center">
+        <div class="filter-tabs"><button class="ft">7d</button><button class="ft on">30d</button><button class="ft">90d</button></div>
+        <button class="btn-exp"><i class="ti ti-download" aria-hidden="true"></i>Export</button>
+      </div>
+    </div>
+    <div class="stats">
+      <div class="sc"><div class="sc-ico ib"><i class="ti ti-brain" aria-hidden="true"></i></div><div class="sc-num">95</div><div class="sc-lbl">Total simulations</div></div>
+      <div class="sc"><div class="sc-ico ig"><i class="ti ti-users" aria-hidden="true"></i></div><div class="sc-num">5</div><div class="sc-lbl">Active users</div></div>
+      <div class="sc"><div class="sc-ico ia"><i class="ti ti-download" aria-hidden="true"></i></div><div class="sc-num">61</div><div class="sc-lbl">Exports this month</div></div>
+      <div class="sc"><div class="sc-ico ir"><i class="ti ti-loader" aria-hidden="true"></i></div><div class="sc-num">4</div><div class="sc-lbl">Processing / failed</div></div>
+    </div>
+    <div class="chart-card">
+      <div class="ch-title">Simulations by week</div>
+      <div class="bar-chart">
+        <div class="bar-col"><div class="bar" style="height:42px"></div><span class="bar-lbl">May 1</span></div>
+        <div class="bar-col"><div class="bar" style="height:58px"></div><span class="bar-lbl">May 8</span></div>
+        <div class="bar-col"><div class="bar" style="height:34px"></div><span class="bar-lbl">May 15</span></div>
+        <div class="bar-col"><div class="bar hi" style="height:78px"></div><span class="bar-lbl">May 22</span></div>
+        <div class="bar-col"><div class="bar" style="height:62px"></div><span class="bar-lbl">May 29</span></div>
+        <div class="bar-col"><div class="bar hi" style="height:90px"></div><span class="bar-lbl">Jun 4</span></div>
+      </div>
+    </div>
+    <div class="table-card">
+      <div class="tc-head">Usage by user</div>
+      <table>
+        <thead><tr><th>User</th><th>Email</th><th>Simulations</th><th>Last active</th><th>Exports</th></tr></thead>
+        <tbody>
+          <tr><td style="font-weight:500">Jane Doe</td><td class="td-m">jane@acmecorp.com</td><td class="td-b">42</td><td class="td-m">Jun 4, 2025</td><td class="td-m">31</td></tr>
+          <tr><td style="font-weight:500">John Smith</td><td class="td-m">john@acmecorp.com</td><td class="td-b">28</td><td class="td-m">Jun 3, 2025</td><td class="td-m">18</td></tr>
+          <tr><td style="font-weight:500">Emily Chen</td><td class="td-m">emily@acmecorp.com</td><td class="td-b">15</td><td class="td-m">May 30, 2025</td><td class="td-m">9</td></tr>
+          <tr><td style="font-weight:500">Michael Brown</td><td class="td-m">michae@acmecorp.com</td><td class="td-b">7</td><td class="td-m">May 25, 2025</td><td class="td-m">3</td></tr>
+          <tr><td style="font-weight:500">Sarah Lee</td><td class="td-m">sarah@acmecorp.com</td><td class="td-b">3</td><td class="td-m">May 20, 2025</td><td class="td-m">0</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
